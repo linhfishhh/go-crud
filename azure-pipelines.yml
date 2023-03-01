@@ -6,8 +6,7 @@
 trigger:
 - master
 
-pool:
-  vmImage: Default
+pool: Default
 
 variables:
   GOBIN:  '$(GOPATH)/bin' # Go binaries path
