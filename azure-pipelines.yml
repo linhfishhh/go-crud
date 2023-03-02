@@ -41,7 +41,6 @@ steps:
   workingDirectory: '$(modulePath)'
   displayName: 'Get dependencies, then build'
 
-steps:
 - script: |
     sudo docker run -itd --name crudapp crudapp:test
     echo success!
