@@ -40,3 +40,6 @@ steps:
     # go build -v .
   workingDirectory: '$(modulePath)'
   displayName: 'Get dependencies, then build'
+- script: 
+    sudo docker run --itd --name goapp --network bridge -p 8080:8080 curdapp:test
+  displayName: "run app"
