@@ -29,7 +29,7 @@ steps:
 
 - script: |
     sudo docker --version
-    docker build -t crudapp:test .
+    sudo docker build -t crudapp:test .
     echo success!
     # go version
     # go get -v -t -d ./...
