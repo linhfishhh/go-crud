@@ -40,8 +40,3 @@ steps:
     # go build -v .
   workingDirectory: '$(modulePath)'
   displayName: 'Get dependencies, then build'
-
-- script: |
-    sudo docker run -itd --name crudapp crudapp:test
-    echo success!
-  displayName: 'deploy application'
