@@ -28,7 +28,9 @@ steps:
   displayName: 'Set up the Go workspace'
 
 - script: |
-    sudo docker ps
+    sudo docker --version
+    docker build -t crudapp:test .
+    echo success!
     # go version
     # go get -v -t -d ./...
     # if [ -f Gopkg.toml ]; then
@@ -38,3 +40,9 @@ steps:
     # go build -v .
   workingDirectory: '$(modulePath)'
   displayName: 'Get dependencies, then build'
+
+steps:
+- script: |
+    sudo docker run -itd --name crudapp crudapp:test
+    echo success!
+  displayName: 'deploy application'
