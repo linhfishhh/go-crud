@@ -27,7 +27,7 @@ steps:
   displayName: 'Set up the Go workspace'
 
 - script: |
-    sudo docker build -t goapp:test
+    sudo docker build -t goapp:test .
     sudo docker images
     echo succes
   workingDirectory: '$(modulePath)'
