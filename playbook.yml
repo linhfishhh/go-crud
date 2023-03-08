@@ -11,7 +11,7 @@
     - name: login docker hub
       shell: docker login -u "{{DOCKER_USERNAME}}" -p "{{DOCKER_PASSWORD}}"
     - name: coppy file
-      coppy:
+      copy:
         src: docker-compose.yaml
         dest: /home/ubuntu
     - name: restart docker-compose
