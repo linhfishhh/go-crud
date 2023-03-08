@@ -1,0 +1,6 @@
+version: '3.3'
+services:
+  app:
+    image: ducdv20/trainning:latest
+    ports:
+      -"8080:8080"
