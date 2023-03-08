@@ -9,11 +9,11 @@
           - docker-compose
         state: present
     - name: login docker hub
-      docker login -u "{{DOCKER_USERNAME}}" -p "{{DOCKER_PASSWORD}}"
+      shell: docker login -u "{{DOCKER_USERNAME}}" -p "{{DOCKER_PASSWORD}}"
     - name: coppy file
       coppy:
         src: docker-compose.yaml
-        desk: /home/ubuntu
+        dest: /home/ubuntu
     - name: restart docker-compose
       shell: |
         docker-compose stop
