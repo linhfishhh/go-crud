@@ -9,7 +9,7 @@
           - docker-compose
         state: present
     - name: login docker hub
-      shell: docker login --username "{{DOCKER_USERNAME}}" --password "{{DOCKER_PASSWORD}}"
+      shell: sudo docker login -u "{{DOCKER_USERNAME}}" -p "{{DOCKER_PASSWORD}}"
     - name: coppy file
       copy:
         src: docker-compose.yaml
