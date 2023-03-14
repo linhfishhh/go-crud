@@ -1,8 +1,8 @@
-FROM golang:1.18.2-alpine
+FROM --platform=linux/amd64 golang:1.18.2-alpine
 WORKDIR /app
 COPY go.mod ./
 COPY go.sum ./
-RUN go get -v -u
+RUN go mod download
 
 COPY *.go ./
 
