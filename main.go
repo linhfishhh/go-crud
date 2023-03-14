@@ -23,7 +23,7 @@ type ToDoItem struct {
 func (ToDoItem) TableName() string { return "todo_items" }
 
 func main() {
-	dsn := "root:123@123a@tcp(52.149.157.44:3306)/crud_db?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:123@123a@tcp(15.206.89.210:3306)/crud_db?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {
